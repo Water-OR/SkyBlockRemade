@@ -1,0 +1,13 @@
+name : Skyblock
+version : 1.0
+main : minecraft.skyblock.SkyBlock
+authors : [WaterOR]
+api-version : 1.12.2
+description : SkyblockRemade
+commands:
+  menu:
+    description: Open Skyblock Menu
+permissions:
+  skyblock.commands.SkyBlockMenu:
+    description: 菜单权限
+    default: true
