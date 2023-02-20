@@ -8,24 +8,21 @@ import org.bukkit.event.Listener;
 
 import org.bukkit.event.inventory.*;
 import org.bukkit.event.player.*;
-import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import minecraft.skyblock.GUI.SkyBlockMenu;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.awt.*;
 
 public class MenuItem implements Listener {
   public ItemStack SkyBlockMenuItem() {
     ItemStack item = new ItemStack(Material.NETHER_STAR);
     ItemMeta itemMeta = item.getItemMeta();
-    itemMeta.setDisplayName(ChatColor.RESET+"SkyBlock Menu");
+    itemMeta.setDisplayName(ChatColor.RESET + "SkyBlock Menu");
     item.setItemMeta(itemMeta);
     return item;
   }
-  
+
   @EventHandler
   public void ItemCheck(PlayerJoinEvent event) {
     if (event.getPlayer().getInventory().getItem(8) == null ||
@@ -39,7 +36,7 @@ public class MenuItem implements Listener {
       public void run() {
         player.setFoodLevel(20);
       }
-    }.runTaskTimerAsynchronously(null, 0, 1);
+    } .runTaskTimerAsynchronously(null, 0, 1);
   }
   @EventHandler
   public void ItemUsed(InventoryClickEvent event) {
@@ -67,6 +64,6 @@ public class MenuItem implements Listener {
   }
   @EventHandler
   public void ItemUsed(PlayerItemMendEvent event) {
-    event.getPlayer().sendMessage(ChatColor.YELLOW+"[SkyBlock]"+ChatColor.RESET+event.getEventName());
+    event.getPlayer().sendMessage(ChatColor.YELLOW + "[SkyBlock]" + ChatColor.RESET + event.getEventName());
   }
 }

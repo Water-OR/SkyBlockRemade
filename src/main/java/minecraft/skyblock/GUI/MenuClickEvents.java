@@ -1,6 +1,5 @@
 package minecraft.skyblock.GUI;
 
-import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
